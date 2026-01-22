@@ -11,7 +11,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         'text-primary': 'var(--text-primary)',
-        'accent': 'var(--accent)',
+        accent: '#cbd161', // Lime Green
         'accent-light': 'var(--accent-light)',
       },
       fontFamily: {

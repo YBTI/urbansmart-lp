@@ -23,6 +23,9 @@ export default function Concept() {
             「緊張」と「緩和」の繰り返しではありません。<br />
             それはひとつの流れるような物語です。
           </p>
+          <p className="text-accent font-bold mt-4 mb-6 tracking-wider">
+            スマートな自分にめぐり合う
+          </p>
           <p>
             UrbanSmartは、ONとOFFの境界線をなくし、<br />
             どんなシーンでも、あなたらしくいられる服を提案します。

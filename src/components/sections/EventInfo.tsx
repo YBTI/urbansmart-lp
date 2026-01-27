@@ -35,9 +35,11 @@ export default function EventInfo() {
             </div>
 
             <div className="mt-10">
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
-                Map & Details
-              </Button>
+              <a href="/event/tokimeki-lab">
+                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                  Map & Details
+                </Button>
+              </a>
             </div>
           </div>
         </div>

@@ -47,7 +47,9 @@ export default function Comparison() {
           </div>
           
           <div className="mt-8">
-            <Button variant="secondary">View Item</Button>
+            <a href="https://www.aeon-kyushu.com/list/c_fashion?Keywords=&fashion_brand=urbansmart" target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary">View Item</Button>
+            </a>
           </div>
         </FadeIn>
 

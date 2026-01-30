@@ -8,22 +8,20 @@ import Button from '../ui/Button'
 const products = [
   {
     id: 1,
-    name: 'Silky Relax Jacket',
-    price: '¥28,000',
-    imageOn: 'https://images.unsplash.com/photo-1548866536-532657d4764b?q=80&w=800&auto=format&fit=crop', // Office
-    imageOff: 'https://images.unsplash.com/photo-1515347619252-60a6bf4fffce?q=80&w=800&auto=format&fit=crop' // Relax
+    name: 'ステッカーリスト',
+    imageOn: '/sticker_collection.png', 
+    imageOff: '/sticker_collection.png', 
+    link: 'https://shop.stiq.co.jp/a/wishlist-hero/wishlist/shared/N27nNPPlxdTaNYZk2Yzj'
   },
   {
     id: 2,
     name: 'Seamless Wide Pants',
-    price: '¥22,000',
     imageOn: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop', // Office
     imageOff: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop' // Relax
   },
   {
     id: 3,
     name: 'Dual Fabric Blouse',
-    price: '¥18,000',
     imageOn: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?q=80&w=800&auto=format&fit=crop', // Office
     imageOff: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=800&auto=format&fit=crop' // Relax
   },
@@ -46,8 +44,8 @@ export default function Collection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <FadeIn key={product.id} delay={index * 0.1} direction="up">
+          {products.map((product, index) => {
+            const Content = (
               <div className="group cursor-pointer">
                 <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-sm bg-gray-200">
                   <img 
@@ -66,8 +64,20 @@ export default function Collection() {
                 </div>
                 <h4 className="font-playfair text-lg mb-1 group-hover:text-accent transition-colors">{product.name}</h4>
               </div>
-            </FadeIn>
-          ))}
+            );
+
+            return (
+              <FadeIn key={product.id} delay={index * 0.1} direction="up">
+                {product.link ? (
+                  <a href={product.link} target="_blank" rel="noopener noreferrer">
+                    {Content}
+                  </a>
+                ) : (
+                  Content
+                )}
+              </FadeIn>
+            );
+          })}
         </div>
 
         <div className="mt-8 text-center md:hidden">

@@ -11,7 +11,7 @@ const products = [
     name: 'ステッカーリスト',
     imageOn: '/sticker_collection.png', 
     imageOff: '/sticker_collection.png', 
-    link: 'https://shop.stiq.co.jp/a/wishlist-hero/wishlist/shared/N27nNPPlxdTaNYZk2Yzj'
+    link: 'https://shop.stiq.co.jp/a/wishlist-hero/wishlist/shared/E7A1alodNOTeoA53jKYa'
   },
   {
     id: 2,
@@ -87,3 +87,4 @@ export default function Collection() {
     </Section>
   )
 }
+

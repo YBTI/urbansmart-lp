@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import FadeIn from '../core/FadeIn'
 import Section from '../ui/Section'
 import Button from '../ui/Button'
+import Link from 'next/link'
 
 const products = [
   {
@@ -15,9 +16,10 @@ const products = [
   },
   {
     id: 2,
-    name: 'Seamless Wide Pants',
+    name: 'View All Items',
     imageOn: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop', // Office
-    imageOff: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop' // Relax
+    imageOff: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop', // Relax
+    link: '/collection'
   },
   {
     id: 3,
@@ -40,49 +42,53 @@ export default function Collection() {
                New Arrivals
              </h3>
            </div>
-           <Button variant="ghost" className="hidden md:flex">View All Items</Button>
+           {/* Button removed as 'View All Items' is now in the grid */}
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {products.map((product, index) => {
-            const Content = (
-              <div className="group cursor-pointer">
-                <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-sm bg-gray-200">
-                  <img 
-                    src={product.imageOn} 
-                    alt={product.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
-                  />
-                  <img 
-                    src={product.imageOff} 
-                    alt={`${product.name} OFF`}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-white flex justify-between items-end translate-y-2 group-hover:translate-y-0 transform transition-transform">
-                      <span className="text-xs tracking-widest">VIEW DETAILS</span>
-                  </div>
-                </div>
-                <h4 className="font-playfair text-lg mb-1 group-hover:text-accent transition-colors">{product.name}</h4>
-              </div>
-            );
+     
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+       {products.map((product, index) => {
+         const Content = (
+           <div className="group cursor-pointer">
+             <div className="relative aspect-[3/4] overflow-hidden mb-4 rounded-sm bg-gray-200">
+               <img 
+                 src={product.imageOn} 
+                 alt={product.name}
+                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
+               />
+               <img 
+                 src={product.imageOff} 
+                 alt={`${product.name} OFF`}
+                 className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+               />
+               <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-white flex justify-between items-end translate-y-2 group-hover:translate-y-0 transform transition-transform">
+                   <span className="text-xs tracking-widest">VIEW DETAILS</span>
+               </div>
+             </div>
+             <h4 className="font-playfair text-lg mb-1 group-hover:text-accent transition-colors">{product.name}</h4>
+           </div>
+         );
 
-            return (
-              <FadeIn key={product.id} delay={index * 0.1} direction="up">
-                {product.link ? (
+          return (
+            <FadeIn key={product.id} delay={index * 0.1} direction="up">
+              {product.link ? (
+                product.link.startsWith('/') ? (
+                   <Link href={product.link}>
+                     {Content}
+                   </Link>
+                ) : (
                   <a href={product.link} target="_blank" rel="noopener noreferrer">
                     {Content}
                   </a>
-                ) : (
-                  Content
-                )}
-              </FadeIn>
-            );
-          })}
-        </div>
+                )
+              ) : (
+                Content
+              )}
+            </FadeIn>
+          );
+       })}
+     </div>
 
-        <div className="mt-8 text-center md:hidden">
-            <Button variant="ghost">View All Items</Button>
-        </div>
+        {/* Mobile button removed */}
       </FadeIn>
     </Section>
   )

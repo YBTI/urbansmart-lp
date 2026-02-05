@@ -34,10 +34,10 @@ export default function TokimekiLab() {
               {/* Event Title */}
               <div className="text-center mb-12">
                 <span className="inline-block px-4 py-1 rounded-full bg-accent text-white text-sm font-bold tracking-wider mb-4">
-                  SPECIAL
+                  SPECIAL POPUP EVENT
                 </span>
                 <h1 className="text-3xl md:text-5xl font-bold font-playfair text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-                  POPUP EVENT
+                  TOKIMEKI LAB.
                 </h1>
                 <p className="text-lg text-gray-600 font-medium">
                   トキメキに出会い、トキメキを作るファッションイベント

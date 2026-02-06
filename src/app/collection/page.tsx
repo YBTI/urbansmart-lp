@@ -157,7 +157,8 @@ function MagazineHero() {
   );
 }
 
-export default function CollectionPage() {
+// RENAMED: This is the active page content, currently hidden.
+function ActiveCollectionPage() {
   return (
     <main className="min-h-screen bg-[#F5F5F0]"> {/* Warm minimal background */}
       
@@ -219,4 +220,36 @@ export default function CollectionPage() {
       <Footer />
     </main>
   )
+}
+
+export default function CollectionPage() {
+    return (
+        <main className="min-h-screen bg-[#F5F5F0] flex flex-col items-center justify-center relative overflow-hidden">
+             {/* Simple Header */}
+             <div className="absolute top-0 left-0 p-8">
+                <Link href="/" className="flex items-center gap-2 group opacity-60 hover:opacity-100 transition-opacity text-black">
+                    <ArrowLeft size={18} />
+                    <span className="font-sans text-xs tracking-[0.2em] uppercase">Back to Entrance</span>
+                </Link>
+             </div>
+
+             <FadeIn>
+                <div className="text-center z-10 p-8">
+                     <p className="font-playfair text-xl md:text-2xl italic text-[#a67c52] mb-4 tracking-widest">UrbanSmart</p>
+                     <h1 className="text-5xl md:text-8xl font-black font-sans uppercase text-gray-900 tracking-tighter mb-8 leading-[0.8]">
+                        Coming<br/>Soon
+                     </h1>
+                     <p className="font-sans text-xs md:text-sm tracking-[0.3em] uppercase text-gray-500">
+                        2026 Winter Collection
+                     </p>
+                </div>
+             </FadeIn>
+
+             {/* Background Decoration */}
+             <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+                 <div className="text-[20vw] font-black font-serif text-black absolute -top-20 -left-20">U</div>
+                 <div className="text-[20vw] font-black font-serif text-black absolute -bottom-20 -right-20">S</div>
+             </div>
+        </main>
+    )
 }

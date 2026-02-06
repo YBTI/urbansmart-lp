@@ -17,9 +17,9 @@ const products = [
   {
     id: 2,
     name: 'View All Items',
-   // imageOn: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop', // Office
-   // imageOff: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop', // Relax
-    link: '/collection'
+   　imageOn: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop', // Office
+   　imageOff: 'https://images.unsplash.com/photo-1516762689617-e1cffcef479d?q=80&w=800&auto=format&fit=crop', // Relax
+  // link: '/collection'
   },
   {
     id: 3,
@@ -93,4 +93,5 @@ export default function Collection() {
     </Section>
   )
 }
+
 

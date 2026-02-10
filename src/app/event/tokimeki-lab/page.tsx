@@ -70,6 +70,50 @@ export default function TokimekiLab() {
                 </div>
               </div>
 
+              {/* Sticker List Banner */}
+              <FadeIn delay={0.1}>
+                <a 
+                  href="https://shop.stiq.co.jp/a/wishlist-hero/wishlist/shared/E7A1alodNOTeoA53jKYa" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block mb-16 relative overflow-hidden rounded-2xl group"
+                >
+                  {/* Background with vibrant gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Content Container */}
+                  <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 text-white">
+                    <div className="text-center md:text-left z-10">
+                      <p className="text-xs font-bold uppercase tracking-[0.4em] mb-4 opacity-90">Exclusive Styling Guide</p>
+                      <h3 className="text-3xl md:text-5xl lg:text-6xl font-black font-sans italic uppercase tracking-tighter leading-none drop-shadow-xl whitespace-nowrap">
+                        ステッカー<span className="text-accent underline decoration-white/30 underline-offset-8">リスト</span>
+                      </h3>
+                      <p className="mt-4 text-sm font-medium opacity-80 font-sans tracking-wide">
+                        イベントで使用している全アイテムのリストをチェック
+                      </p>
+                    </div>
+                    
+                    <div className="flex flex-col items-center md:items-end z-10">
+                      <div className="px-8 py-3 bg-white text-gray-900 font-bold rounded-full text-base tracking-widest group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-[0_10px_20px_-5px_rgba(0,0,0,0.3)] group-hover:shadow-[0_15px_30px_-5px_rgba(255,255,255,0.4)] group-hover:-translate-y-1">
+                        VIEW LOOKBOOK
+                      </div>
+                      <p className="text-[10px] mt-4 opacity-60 font-sans tracking-[0.2em] md:text-right uppercase">
+                        External Store: shop.stiq.co.jp
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Decorative Background Text (UrbanSmart Style) */}
+                  <div className="absolute -bottom-8 -right-8 text-[160px] font-black italic text-white opacity-10 pointer-events-none select-none tracking-tighter leading-none">
+                    STIQ
+                  </div>
+                  
+                  {/* Decorative Elements */}
+                  <div className="absolute top-4 right-4 w-12 h-12 border border-white/20 rounded-full animate-pulse" />
+                  <div className="absolute bottom-10 left-10 w-6 h-6 bg-accent/30 rounded-full blur-xl" />
+                </a>
+              </FadeIn>
+
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Shop Layout */}
                 <div>

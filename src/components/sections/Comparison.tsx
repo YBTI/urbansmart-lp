@@ -37,7 +37,7 @@ export default function Comparison() {
 
           <div className="space-y-4">
             <h4 className="font-playfair text-xl transition-all duration-300">
-                {isBusiness ? "Silky Relax Jacket - Office Style" : "Silky Relax Jacket - Weekend Style"}
+                {isBusiness ? "Silky Relax Jacket - ON Style" : "Silky Relax Jacket - OFF Style"}
             </h4>
             <p className="text-sm text-gray-500 min-h-[4.5em] transition-opacity duration-300">
                 {isBusiness 
@@ -53,15 +53,22 @@ export default function Comparison() {
           </div>
         </FadeIn>
 
-        {/* Image Content - Single Dual Image as requested */}
-        <div className="order-1 lg:order-2 h-[500px] md:h-[600px] relative overflow-hidden rounded-sm shadow-xl group">
-             <div 
-               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-               style={{ 
-                   backgroundImage: 'url("/comparison_dual.png")' 
-               }}
-             />
-             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
+        {/* Image Content - Now interactive with ON/OFF images */}
+        <div className="order-1 lg:order-2 h-[500px] md:h-[600px] relative overflow-hidden rounded-sm shadow-xl group bg-gray-50">
+             <AnimatePresence mode="wait">
+                <motion.div
+                  key={isBusiness ? 'on' : 'off'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ 
+                      backgroundImage: `url("${isBusiness ? '/ON.png' : '/OFF.png'}")` 
+                  }}
+                />
+             </AnimatePresence>
+             <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-500" />
         </div>
       </div>
     </Section>

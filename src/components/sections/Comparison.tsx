@@ -62,7 +62,7 @@ export default function Comparison() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="absolute inset-0 bg-cover bg-center"
+                  className="absolute inset-0 bg-[size:95%] bg-center bg-no-repeat"
                   style={{ 
                       backgroundImage: `url("${isBusiness ? '/ON.png' : '/OFF.png'}")` 
                   }}

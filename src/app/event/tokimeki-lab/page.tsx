@@ -122,6 +122,16 @@ export default function TokimekiLab() {
                     <span className="w-1.5 h-6 bg-pink-400 rounded-full mr-3"></span>
                     Official Instagram
                   </h2>
+                  <div className="flex justify-center mb-6">
+                    <a
+                      href="https://www.instagram.com/nemu_plus?igsh=MTZsdXJ2eXZoZHgwaw=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-bold text-sm tracking-wider rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      📸 インスタでイベント情報投稿中
+                    </a>
+                  </div>
                   <div className="flex justify-center">
                     <InstagramEmbed
                       permalink="https://www.instagram.com/reel/DUxEsifkoQa/"

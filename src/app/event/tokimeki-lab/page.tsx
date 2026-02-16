@@ -115,6 +115,22 @@ export default function TokimekiLab() {
                 </a>
               </FadeIn>
 
+              {/* Instagram Embed */}
+              <FadeIn delay={0.2}>
+                <div className="mb-16">
+                  <h2 className="text-xl font-bold mb-6 text-gray-800 flex items-center">
+                    <span className="w-1.5 h-6 bg-pink-400 rounded-full mr-3"></span>
+                    Official Instagram
+                  </h2>
+                  <div className="flex justify-center">
+                    <InstagramEmbed
+                      permalink="https://www.instagram.com/reel/DUxEsifkoQa/"
+                      className="w-full max-w-[540px]"
+                    />
+                  </div>
+                </div>
+              </FadeIn>
+
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Shop Layout */}
                 <div>
@@ -156,21 +172,6 @@ export default function TokimekiLab() {
                 </div>
               </div>
 
-              {/* Instagram Embed */}
-              <FadeIn delay={0.2}>
-                <div className="mt-16">
-                  <h2 className="text-xl font-bold mb-6 text-gray-800 flex items-center">
-                    <span className="w-1.5 h-6 bg-pink-400 rounded-full mr-3"></span>
-                    Official Instagram
-                  </h2>
-                  <div className="flex justify-center">
-                    <InstagramEmbed
-                      permalink="https://www.instagram.com/reel/DUxEsifkoQa/"
-                      className="w-full max-w-[540px]"
-                    />
-                  </div>
-                </div>
-              </FadeIn>
 
             </div>
           </div>

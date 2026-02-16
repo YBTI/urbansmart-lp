@@ -2,6 +2,7 @@ import Link from 'next/link'
 import FadeIn from '@/components/core/FadeIn'
 import Section from '@/components/ui/Section'
 import Button from '@/components/ui/Button'
+import InstagramEmbed from '@/components/features/InstagramEmbed'
 import { ArrowLeft, MapPin, Calendar, Clock } from 'lucide-react'
 
 export default function TokimekiLab() {
@@ -154,6 +155,22 @@ export default function TokimekiLab() {
                   </div>
                 </div>
               </div>
+
+              {/* Instagram Embed */}
+              <FadeIn delay={0.2}>
+                <div className="mt-16">
+                  <h2 className="text-xl font-bold mb-6 text-gray-800 flex items-center">
+                    <span className="w-1.5 h-6 bg-pink-400 rounded-full mr-3"></span>
+                    Official Instagram
+                  </h2>
+                  <div className="flex justify-center">
+                    <InstagramEmbed
+                      permalink="https://www.instagram.com/reel/DUxEsifkoQa/"
+                      className="w-full max-w-[540px]"
+                    />
+                  </div>
+                </div>
+              </FadeIn>
 
             </div>
           </div>
